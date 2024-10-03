@@ -8,9 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Update="Aufgabe_13\Program.cs">
-      <Link>Aufgabe_12\Program.cs</Link>
-    </Compile>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
 </Project>
