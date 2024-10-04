@@ -4,47 +4,41 @@
     {
         static void Main(string[] args)
         {
-
             while (true)
             {
-                Console.WriteLine("Ihr Geburtsdatum (dd.mm.jjjj)");
+                Console.WriteLine("Dein Geburtsdatum (tt.mm.jjjj)");
 
                 string input = Convert.ToString(Console.ReadLine());
 
-                DateTime birthday;
+                DateTime birthday; 
                 DateTime today = DateTime.Today;
-
-
 
                 if (DateTime.TryParse(input, out birthday))
                 {
+
                     TimeSpan interval = today - birthday;
 
+
                     Console.WriteLine();
-                    Console.WriteLine($"Sie sind {(int)(interval.Days / 365.24)} Jahre alt");
+                    Console.WriteLine($"Du bist {(int)(interval.Days / 365.2422)} Jahre alt");
                     Console.WriteLine("Oder: ");
 
-                    Console.WriteLine($"Sie sind {(int)(interval.Days / 30.437)} Monate alt");
+                    Console.WriteLine($"Du bist {(int)(interval.Days / 30.437)} Monate alt");
                     Console.WriteLine("Oder: ");
 
-                    Console.WriteLine($"Sie sind {interval.Days / 7} Wochen alt");
+                    Console.WriteLine($"Du bist {interval.Days / 7} Wochen alt");
                     Console.WriteLine("Oder: ");
 
-                    Console.WriteLine($"Sie sind {interval.Days} Tage alt");
+                    Console.WriteLine($"Du bist {interval.Days} Tage alt");
                     Console.WriteLine();
                 }
                 else
                 {
                     Console.WriteLine();
-                    Console.WriteLine("Eingabefehler. Bitte geben Sie eine gültiges Datum ein.");
+                    Console.WriteLine("Bitte gebe eine gültiges Datum ein.");
                     Console.WriteLine();
                 }
-
             }
-
-
-
-
         }
     }
 }
